@@ -117,12 +117,12 @@ export default function WaterCalculatorPage() {
           onClick={calculate}
           className="w-full bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold py-2 px-4 rounded-md transition-colors"
         >
-          새로운 평단가 계산하기
+          평단가 계산하기
         </button>
 
         {result !== null && (
           <div className="mt-6 text-center text-gray-800 space-y-2 text-lg font-semibold">
-            <p>📉 새로운 평단가: <span className="text-blue-600">{result.toLocaleString()} 원</span></p>
+            <p>📉 평단가: <span className="text-blue-600">{result.toLocaleString()} 원</span></p>
           </div>
         )}
 

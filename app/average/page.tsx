@@ -16,7 +16,7 @@ export default function AverageCalculatorPage() {
   const formatNumber = (value: string) => {
     const num = parseFloat(value.replace(/,/g, ''));
     if (isNaN(num)) return '';
-    return num.toLocaleString();
+    return num.toLocaleString("ko-KR");
   };
 
   const handleChange = (
@@ -100,7 +100,7 @@ export default function AverageCalculatorPage() {
                 value={item.price}
                 onChange={(e) => handleChange(i, "price", e.target.value)}
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
-                placeholder={`예: ${60000 + i * 1000}`}
+                placeholder={`예: ${formatNumber((60000 + i * 1000).toString())}`}
               />
             </div>
 
@@ -113,7 +113,7 @@ export default function AverageCalculatorPage() {
                 value={item.qty}
                 onChange={(e) => handleChange(i, "qty", e.target.value)}
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
-                placeholder={`예: ${5 + i * 5}`}
+                placeholder={`예: ${formatNumber((5 + i * 5).toString())}`}
               />
             </div>
           </div>
@@ -132,11 +132,10 @@ export default function AverageCalculatorPage() {
 
         {average !== null && (
           <div className="mt-6 text-center text-gray-800 space-y-2 text-lg font-semibold">
-            <p>📌 평단가: <span className="text-blue-600">{average.toLocaleString()} 원</span></p>
+            <p>📌 평단가: <span className="text-blue-600">{average.toLocaleString("ko-KR")} 원</span></p>
           </div>
         )}
       </div>
     </PageLayout>
   );
 }
-
