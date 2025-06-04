@@ -37,7 +37,7 @@ export default function LosscutCalculatorPage() {
 
   return (
     <PageLayout
-      title="손절가 계산기"
+      title="주식 손절가 계산기"
       description="매수가와 손실률을 기준으로 손절 가격을 빠르게 계산할 수 있는 손절가 계산기입니다."
     >
       <div className="space-y-4">

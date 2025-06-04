@@ -43,7 +43,7 @@ export default function DividendCalculatorPage() {
 
   return (
     <PageLayout
-      title="배당수익률 계산기"
+      title="주식 배당수익률 계산기"
       description="주당 배당금과 주가, 보유 주식 수를 입력하면 배당수익률과 총 배당금을 계산합니다."
     >
       <div className="space-y-4">

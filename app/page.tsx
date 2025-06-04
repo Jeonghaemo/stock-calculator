@@ -1,4 +1,9 @@
 // app/page.tsx 또는 src/app/page.tsx
+export const metadata = {
+  title: "주식 계산기 모음 - 수익률 계산, 물타기 계산, 실시간 환율, 양도소득세까지",
+  description:
+    "실시간 환율, 주식 수익률, 물타기 계산, 평단가 계산, 손절가 계산, 양도소득세, 배당수익률까지 다양한 투자 계산기를 한 곳에서 간편하게 이용해보세요.",
+};
 
 import Link from "next/link";
 
@@ -19,6 +24,14 @@ export default function Home() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-8 text-center">주식 계산기 모음</h1>
+<div className="text-center mt-10 mb-6 px-4">
+  <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 leading-snug">
+    투자에 필요한 모든 계산기를 한 번에 확인!
+  </h2>
+  <p className="text-gray-600 mt-2 text-base sm:text-lg">
+    실시간 환율부터 양도소득세까지, 수익률 계산 등 필요한 계산을 빠르게 확인할 수 있습니다.
+  </p>
+</div>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {calculators.map(({ title, href, description }) => (

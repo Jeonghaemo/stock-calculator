@@ -45,7 +45,7 @@ export default function FeeCalculatorPage() {
 
   return (
     <PageLayout
-      title="수수료 계산기"
+      title="주식 수수료 계산기"
       description="매도 단가와 수량을 입력하면 수수료와 세금을 뺀 실수령액을 계산합니다."
     >
       <div className="space-y-4">

@@ -37,7 +37,7 @@ export default function TargetCalculatorPage() {
 
   return (
     <PageLayout
-      title="목표 수익률 계산기"
+      title="주식 목표 수익률 계산기"
       description="매수가와 수익률을 입력하면 목표 매도가를 계산할 수 있는 목표 수익률 계산기입니다."
     >
       <div className="space-y-4">

@@ -56,7 +56,7 @@ export default function CapitalGainTaxCalculatorPage() {
 
   return (
     <PageLayout
-      title="양도소득세 계산기"
+      title="주식 양도소득세 계산기"
       description="주식 매수/매도 정보와 필요경비, 공제를 입력하면 예상 양도소득세를 계산합니다."
     >
       <div className="space-y-4">
