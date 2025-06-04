@@ -70,14 +70,14 @@ export default function ExchangeForm() {
           )
         }
         placeholder="금액 입력"
-        className="w-full border rounded px-4 py-2"
+        className="w-full border border-gray-300 rounded px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
       />
 
-      <div className="flex gap-2 items-center">
+      <div className="flex flex-col sm:flex-row gap-2 w-full">
         <select
           value={fromCurrency}
           onChange={(e) => setFromCurrency(e.target.value)}
-          className="flex-1 border rounded px-4 py-2"
+          className="flex-1 border border-gray-300 rounded px-4 py-2"
         >
           {currencies.map((cur) => (
             <option key={cur.code} value={cur.code}>
@@ -89,7 +89,7 @@ export default function ExchangeForm() {
         <button
           type="button"
           onClick={handleSwap}
-          className="px-2 py-1 border rounded hover:bg-gray-100"
+          className="sm:self-center px-3 py-2 border rounded hover:bg-gray-100 text-lg"
           title="통화 바꾸기"
         >
           ↔
@@ -98,7 +98,7 @@ export default function ExchangeForm() {
         <select
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}
-          className="flex-1 border rounded px-4 py-2"
+          className="flex-1 border border-gray-300 rounded px-4 py-2"
         >
           {currencies.map((cur) => (
             <option key={cur.code} value={cur.code}>
@@ -110,7 +110,7 @@ export default function ExchangeForm() {
 
       <button
         onClick={handleConvert}
-        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-base font-semibold"
       >
         환율 계산하기
       </button>

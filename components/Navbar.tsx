@@ -11,7 +11,7 @@ export default function Navbar() {
           <Link href="/average" className="hover:text-blue-600">평단가 계산기</Link>
           <Link href="/fee" className="hover:text-blue-600">수수료 계산기</Link>
           <Link href="/compound" className="hover:text-blue-600">복리 계산기</Link>
-          <Link href="/exchange" className="hover:text-blue-600">환전 계산기</Link>
+          <Link href="/exchange" className="hover:text-blue-600">환율 계산기</Link>
           <Link href="/target" className="hover:text-blue-600">목표 수익률 계산기</Link>
           <Link href="/losscut" className="hover:text-blue-600">손절가 계산기</Link>
           <Link href="/tax" className="hover:text-blue-600">양도소득세 계산기</Link>
