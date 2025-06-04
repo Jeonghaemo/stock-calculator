@@ -91,6 +91,22 @@ export default function FeeCalculatorPage() {
           </div>
         )}
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>매수가, 현재가, 수량을 입력하세요.</li>
+    <li>매수·매도 수수료율은 기본값이 설정되어 있으며 변경 가능합니다.</li>
+    <li>실제 수익금과 수익률, 수수료 차감 후 금액이 자동 계산됩니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    수수료 계산기는 주식 매매 시 발생하는 수수료를 반영하여 실제 수익을 계산합니다. 실수익률과 세후 수익을 정확하게 확인할 수 있습니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

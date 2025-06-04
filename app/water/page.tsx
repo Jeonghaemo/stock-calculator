@@ -130,6 +130,22 @@ export default function WaterCalculatorPage() {
           ※ 총 투자금액과 전체 수량을 바탕으로 새로운 평단가를 계산합니다.
         </p>
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>현재 평단가와 수량을 입력하세요.</li>
+    <li>최대 3회까지 추가 매수 가격과 수량을 입력할 수 있습니다.</li>
+    <li>입력값을 바탕으로 새로운 평균 평단가가 계산됩니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    물타기 계산기는 여러 번의 매수에 따른 평균 매입단가를 계산해줍니다. 추가 매수 전략의 효과를 사전에 확인할 수 있습니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

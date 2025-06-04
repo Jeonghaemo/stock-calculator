@@ -116,6 +116,22 @@ export default function YieldCalculatorPage() {
           </div>
         )}
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>매수가, 현재가, 수량을 입력하세요.</li>
+    <li>수익 계산하기 버튼을 눌러주세요.</li>
+    <li>수익률과 수익금을 확인할 수 있습니다. 세금을 제외한 금액도 확인할 수 있습니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    주식 수익률 계산기는 매수가, 현재가, 보유 수량을 기준으로 수익률과 수익 금액을 계산합니다. 단타, 중장기 투자 결과를 빠르게 확인하고자 할 때 유용합니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

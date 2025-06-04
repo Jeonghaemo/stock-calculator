@@ -94,6 +94,21 @@ export default function DividendCalculatorPage() {
           </div>
         )}
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>주당 배당금과 현재 주가를 입력하면 배당수익률이 계산됩니다.</li>
+    <li>보유 주식 수를 입력하면 받을 총 배당금도 함께 확인할 수 있습니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    배당수익률 계산기는 현재 주가 대비 연간 배당금의 비율을 계산합니다. 안정적인 현금 흐름을 원하는 투자자에게 유용합니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

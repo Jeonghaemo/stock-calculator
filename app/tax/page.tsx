@@ -132,6 +132,22 @@ export default function CapitalGainTaxCalculatorPage() {
           </div>
         )}
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>매도가, 매수가, 필요경비, 기본공제를 입력하세요.</li>
+    <li>입력값을 기준으로 양도차익과 과세표준이 계산됩니다.</li>
+    <li>적용 세율을 기준으로 예상 세금이 표시됩니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    양도소득세 계산기는 주식 양도차익에 대한 과세 금액을 계산합니다. 국내 및 해외 주식 매매 후 예상 세금 규모를 미리 확인할 수 있습니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

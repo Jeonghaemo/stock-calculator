@@ -240,6 +240,22 @@ export default function CompoundCalculatorPage() {
           ※ 복리 이자율은 선택한 방식(연, 반기, 분기, 월, 일)에 따라 계산됩니다.
         </p>
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>초기 금액, 기간(년), 연이율(%)을 입력하세요.</li>
+    <li>이자 복리 방식으로 누적 수익이 계산됩니다.</li>
+    <li>‘계산하기’ 버튼을 누르면 결과가 아래에 표시됩니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    복리 계산기는 일정 수익률로 매년 재투자했을 때 자산이 얼마나 늘어나는지를 계산합니다. 장기 투자 수익 시뮬레이션에 유용하게 활용할 수 있습니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

@@ -76,6 +76,21 @@ export default function TargetCalculatorPage() {
           </div>
         )}
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>매수가와 목표 수익률(%)을 입력하세요.</li>
+    <li>목표 수익률에 해당하는 목표 매도가가 계산됩니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    목표 수익률 계산기는 설정한 수익률에 도달하기 위해 필요한 매도가를 계산합니다. 목표가 설정이나 분할매도 시점 판단에 활용할 수 있습니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }

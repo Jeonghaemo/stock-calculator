@@ -76,6 +76,22 @@ export default function LosscutCalculatorPage() {
           </div>
         )}
       </div>
+      <div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>매수가와 손절기준 손실률(%)을 입력하세요.</li>
+    <li>손절가가 바로 계산되어 표시됩니다.</li>
+    <li>실제 매도 시 참고할 수 있는 기준가입니다.</li>
+  </ul>
+</div>
+
+<div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    손절가 계산기는 매수가 대비 손절 기준 비율을 입력하면 매도 기준 가격을 계산합니다. 리스크 관리나 손절 금액 계산에 도움이 됩니다.
+  </p>
+</div>
+
     </PageLayout>
   );
 }
