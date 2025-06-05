@@ -68,7 +68,7 @@ export default function CapitalGainTaxCalculatorPage() {
 
   return (
     <PageLayout
-      title="양도소득세 계산기 (국내/해외)"
+      title="주식 양도소득세 계산기 (국내/해외)"
       description="국내 및 해외 주식 매매 시 양도차익에 대한 세금 여부와 세액을 계산할 수 있습니다."
     >
       <div className="flex justify-center mb-6">
