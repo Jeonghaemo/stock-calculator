@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 // ✅ Navbar 불러오기
-import Navbar from "@/components/Navbar"; // 또는 상대 경로로 ../components/Navbar
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Search Console 메타태그 삽입 */}
+        <meta name="google-site-verification" content="wcYdT7ccjF1RCKtJp_HIKYR6KyClzKuuBkbnLLoaC68" />
+        <meta name="naver-site-verification" content="9ae40fb9f79a937e016dfe0401dc7bae66f8cf21" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* ✅ 여기에 Navbar 삽입 */}
         <Navbar />
         {children}
       </body>
     </html>
   );
 }
+
 
