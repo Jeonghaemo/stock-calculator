@@ -139,16 +139,15 @@ export default function AverageCalculatorPage() {
       <div className="mt-10">
   <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
   <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
-    <li>금액을 입력하고, 환전할 통화를 선택하세요.</li>
-    <li>‘환율 계산하기’를 누르면 환전된 금액이 표시됩니다.</li>
-    <li>양방향 통화 전환도 버튼으로 쉽게 가능합니다.</li>
+    <li>1~3회차까지의 매수 가격과 수량을 입력하세요.</li>
+    <li>계산하기 버튼을 누르면 최종 평단가가 표시됩니다.</li>
   </ul>
 </div>
 
 <div className="mt-6">
   <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
   <p className="text-gray-700 text-base leading-relaxed">
-    환율 계산기는 실시간 환율을 기반으로 다양한 국가 통화 간 금액을 변환해줍니다. 해외여행, 송금, 외화 투자 시 활용할 수 있습니다.
+    평단가 계산기는 여러 차례에 걸쳐 매수한 주식의 평균 단가를 계산합니다. 분할 매수 시 자신의 실제 평단가를 확인할 수 있어 투자에 도움이 됩니다.
   </p>
 </div>
 

@@ -94,8 +94,8 @@ export default function FeeCalculatorPage() {
       <div className="mt-10">
   <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
   <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
-    <li>매수가, 현재가, 수량을 입력하세요.</li>
-    <li>매수·매도 수수료율은 기본값이 설정되어 있으며 변경 가능합니다.</li>
+    <li>매도가와 수량을 입력하세요.</li>
+    <li>매수·매도 수수료율은 기본값이 설정되어 있습니다.</li>
     <li>실제 수익금과 수익률, 수수료 차감 후 금액이 자동 계산됩니다.</li>
   </ul>
 </div>

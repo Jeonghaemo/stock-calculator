@@ -108,7 +108,7 @@ export default function CompoundCalculatorPage() {
         </div>
 
         <div>
-          <label className="block mb-1 font-medium text-gray-700 text-[16px]">시작 금액 (원)</label>
+          <label className="block mb-1 font-medium text-gray-700 text-[16px]">초기 금액 (원)</label>
           <input
             type="text"
             value={principal}
@@ -243,9 +243,9 @@ export default function CompoundCalculatorPage() {
       <div className="mt-10">
   <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
   <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
-    <li>초기 금액, 기간(년), 연이율(%)을 입력하세요.</li>
-    <li>이자 복리 방식으로 누적 수익이 계산됩니다.</li>
-    <li>‘계산하기’ 버튼을 누르면 결과가 아래에 표시됩니다.</li>
+    <li>초기 금액, 기간(년,월), 연이율(%)을 입력하세요.</li>
+    <li>기본 복리와 적립식 복리 방식으로 누적 수익을 계산할 수 있습니다.</li>
+    <li>계산하기 버튼을 누르면 총 투자금과 수익, 월별 스케줄표를 확인할 수 있습니다.</li>
   </ul>
 </div>
 

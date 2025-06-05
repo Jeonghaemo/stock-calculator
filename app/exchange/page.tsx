@@ -12,7 +12,7 @@ export default function ExchangePage() {
   <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
   <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
     <li>금액을 입력하고, 환전할 통화를 선택하세요.</li>
-    <li>‘환율 계산하기’를 누르면 환전된 금액이 표시됩니다.</li>
+    <li>환율 계산하기를 누르면 환전된 금액이 표시됩니다.</li>
     <li>양방향 통화 전환도 버튼으로 쉽게 가능합니다.</li>
   </ul>
 </div>

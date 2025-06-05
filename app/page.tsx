@@ -3,7 +3,20 @@ export const metadata = {
   title: "주식 계산기 모음 - 수익률 계산, 물타기 계산, 실시간 환율, 양도소득세까지",
   description:
     "실시간 환율, 주식 수익률, 물타기 계산, 평단가 계산, 손절가 계산, 양도소득세, 배당수익률까지 다양한 투자 계산기를 한 곳에서 간편하게 이용해보세요.",
+  openGraph: {
+    title: "주식 계산기 모음",
+    description: "수익률, 양도소득세, 환율까지 한 번에 계산",
+    images: [
+      {
+        url: "/thumbnail.png", // public 폴더 기준 경로
+        width: 1200,
+        height: 630,
+        alt: "주식 계산기 대표 이미지",
+      },
+    ],
+  },
 };
+
 
 import Link from "next/link";
 
