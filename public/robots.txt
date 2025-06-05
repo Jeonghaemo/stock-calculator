@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://calculator.stocktrend.co.kr/sitemap.xml
