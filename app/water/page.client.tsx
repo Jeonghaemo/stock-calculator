@@ -128,7 +128,7 @@ export default function WaterCalculatorPage() {
             </div>
             <div className="w-1/2">
               <label className="block mb-1 font-medium text-gray-700 text-[16px]">
-                추가 수량 {idx} (주)
+                추가 매수 수량 {idx} (주)
               </label>
               <input
                 type="text"
@@ -168,7 +168,7 @@ export default function WaterCalculatorPage() {
         <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
           <li>현재 평단가, 수량, 주가를 입력하세요.</li>
           <li>최대 3회까지 추가 매수 가격과 수량을 입력할 수 있습니다.</li>
-          <li>입력값을 바탕으로 새로운 평균 평단가 및 수익률이 계산됩니다.</li>
+          <li>추가 매수한 최종 평균 평단가 및 수익률이 계산됩니다.</li>
         </ul>
       </div>
 
