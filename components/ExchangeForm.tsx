@@ -47,9 +47,9 @@ export default function ExchangeForm() {
       );
       const data = await res.json();
 
-      if (!data || !data.result) {
-        throw new Error("API 응답이 유효하지 않습니다.");
-      }
+     if (!data || typeof data.result !== "number") {
+  throw new Error("API 응답이 유효하지 않습니다.");
+}
 
       setResult(data.result);
     } catch (err) {
