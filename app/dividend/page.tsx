@@ -1,4 +1,6 @@
 // ✅ app/dividend/page.tsx
+"use client";
+
 export const metadata = {
   title: "주식 배당수익률 계산기",
   description: "주당 배당금과 주가, 보유 주식 수를 입력하면 배당수익률과 총 배당금을 계산합니다.",
@@ -11,8 +13,6 @@ export const metadata = {
     type: "website"
   }
 };
-
-"use client";
 
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
