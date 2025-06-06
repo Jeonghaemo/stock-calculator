@@ -1,3 +1,15 @@
+export const metadata = {
+  title: "주식 수익률 계산기",
+  description: "매수가, 현재가, 수량을 입력하면 수익률과 실현 손익을 자동 계산합니다.",
+  openGraph: {
+    title: "주식 수익률 계산기",
+    description: "매수가, 현재가, 수량을 입력하면 수익률과 실현 손익을 바로 계산할 수 있습니다.",
+    url: "https://calculator.stocktrend.co.kr/yield",
+    siteName: "Stocktrend Calculator",
+    locale: "ko_KR",
+    type: "website"
+  }
+};
 "use client";
 
 import { useState } from "react";
@@ -63,6 +75,7 @@ export default function YieldCalculatorPage() {
       <div className="space-y-4">
     
     <div>
+    
   <label className="block mb-1 font-medium text-gray-700 text-[16px]">매수가 (원)</label>
   <input
     type="text"
