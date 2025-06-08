@@ -48,9 +48,6 @@ export default function FeeCalculatorPage() {
       title="주식 수수료 계산기"
       description="매도 단가와 수량을 입력하면 수수료와 세금을 뺀 실수령액을 계산합니다."
     >
-      <div className="my-8">
-        <GoogleAdsense />
-      </div>
       <div className="space-y-4">
         <div>
           <label className="block mb-1 font-medium text-gray-700 text-[16px]">매도 단가 (원)</label>

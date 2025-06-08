@@ -8,13 +8,12 @@ declare global {
   }
 }
 
-export default function GoogleAdsense() {
+export default function GlobalAdsense() {
   const adRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // 광고 태그가 이미 초기화되었는지 확인
     const hasInitialized = adRef.current?.querySelector("ins")?.getAttribute("data-adsbygoogle-status") === "done";
 
     if (!hasInitialized) {
@@ -28,7 +27,7 @@ export default function GoogleAdsense() {
   }, []);
 
   return (
-    <div ref={adRef}>
+    <div ref={adRef} className="my-6 max-w-3xl mx-auto px-4">
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
@@ -41,5 +40,6 @@ export default function GoogleAdsense() {
     </div>
   );
 }
+
 
 

@@ -91,9 +91,6 @@ export default function CompoundCalculatorPage() {
       title="복리 계산기"
       description="기본 복리와 적립식 복리를 계산할 수 있습니다."
     >
-      <div className="my-8">
-        <GoogleAdsense />
-      </div>
       <div className="space-y-4">
         <div className="flex gap-2">
           <button

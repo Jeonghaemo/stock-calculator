@@ -13,9 +13,7 @@ export default function ExchangePage() {
       <p className="text-gray-700 mb-6 text-base leading-relaxed font-medium">
         실시간 환율로 간편하게 계산할 수 있는 환율 계산기입니다. 여러 나라 통화 간 변환을 빠르고 정확하게 확인해보세요.
       </p>
-      <div className="my-8">
-        <GoogleAdsense />
-      </div>
+
       <div className="bg-white p-6 rounded-lg shadow">
         <ExchangeForm />
 

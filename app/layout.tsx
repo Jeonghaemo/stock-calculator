@@ -2,9 +2,9 @@ import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-// ✅ Navbar 불러오기
 import Navbar from "@/components/Navbar";
+import GoogleAdsense from "@/components/GoogleAdsense";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
