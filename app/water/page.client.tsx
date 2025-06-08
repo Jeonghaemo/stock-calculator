@@ -1,5 +1,5 @@
 "use client";
-
+import GoogleAdsense from "@/components/GoogleAdsense";
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 
@@ -78,6 +78,11 @@ export default function WaterCalculatorPage() {
       title="주식 물타기 계산기"
       description="현재 평단가, 수익률, 물타기 이후 예상 수익률까지 확인할 수 있습니다."
     >
+      
+      <div className="my-8">
+        <GoogleAdsense />
+      </div>
+
       <div className="space-y-4">
         <div>
           <label className="block mb-1 font-medium text-gray-700 text-[16px]">현재 주가 (원)</label>

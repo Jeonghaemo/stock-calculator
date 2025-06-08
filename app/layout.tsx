@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -28,6 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        
+           <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564123418761220"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         {/* ✅ Search Console 메타태그 삽입 */}
         <meta name="google-site-verification" content="wcYdT7ccjF1RCKtJp_HIKYR6KyClzKuuBkbnLLoaC68" />
         <meta name="naver-site-verification" content="9ae40fb9f79a937e016dfe0401dc7bae66f8cf21" />

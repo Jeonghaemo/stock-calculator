@@ -1,5 +1,5 @@
 "use client";
-
+import GoogleAdsense from "@/components/GoogleAdsense";
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 
@@ -60,6 +60,10 @@ export default function YieldCalculatorPage() {
       title="주식 수익률 계산기"
       description="매수가, 현재가, 수량을 입력하면 수익률과 실수익률을 자동 계산합니다."
     >
+      <div className="my-8">
+        <GoogleAdsense />
+      </div>
+      
       <div className="space-y-4">
     
     <div>

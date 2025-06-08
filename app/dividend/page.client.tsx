@@ -1,6 +1,6 @@
 // ✅ app/dividend/page.tsx
 "use client";
-
+import GoogleAdsense from "@/components/GoogleAdsense";
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 
@@ -46,6 +46,10 @@ export default function DividendCalculatorPage() {
       title="주식 배당수익률 계산기"
       description="주당 배당금과 주가, 보유 주식 수를 입력하면 배당수익률과 총 배당금을 계산합니다."
     >
+      <div className="my-8">
+        <GoogleAdsense />
+      </div>
+      
       <div className="space-y-4">
         <div>
           <label className="block mb-1 font-medium text-gray-700 text-[16px]">주당 배당금 (원)</label>

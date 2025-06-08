@@ -1,5 +1,5 @@
 "use client";
-
+import GoogleAdsense from "@/components/GoogleAdsense";
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 

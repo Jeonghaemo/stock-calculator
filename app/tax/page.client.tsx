@@ -1,6 +1,6 @@
 // ✅ app/tax/page.tsx
 "use client";
-
+import GoogleAdsense from "@/components/GoogleAdsense";
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 
@@ -71,6 +71,11 @@ export default function CapitalGainTaxCalculatorPage() {
       title="주식 양도소득세 계산기 (국내/해외)"
       description="국내 및 해외 주식 매매 시 양도차익에 대한 세금 여부와 세액을 계산할 수 있습니다."
     >
+
+      <div className="my-8">
+        <GoogleAdsense />
+      </div>
+      
       <div className="flex justify-center mb-6">
         <button
           className={`px-4 py-2 rounded-l-md border ${activeTab === "domestic" ? "bg-blue-600 text-white" : "bg-gray-100"}`}
