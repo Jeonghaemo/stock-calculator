@@ -15,6 +15,7 @@ export default function PageLayout({
       <Head>
         <title>{title}</title>
         {description && <meta name="description" content={description} />}
+      <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">{title}</h1>
