@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ExchangeResult from "./ExchangeResult";
+import GoogleAdsense from "@/components/GoogleAdsense";
 
 const currencies = [
   { code: "USD", label: "미국 달러" },
@@ -42,11 +43,11 @@ export default function ExchangeForm() {
         return;
       }
 
-      const res = await fetch(
-        `/api/exchange?from=${fromCurrency}&to=${toCurrency}&amount=${value}`
-      );
-      const data = await res.json();
+      const res = await fetch(`/api/exchange?from=${fromCurrency}&to=${toCurrency}&amount=${amount}`);
+const data = await res.json();
 
+
+      
      if (!data || typeof data.result !== "number") {
   throw new Error("API 응답이 유효하지 않습니다.");
 }

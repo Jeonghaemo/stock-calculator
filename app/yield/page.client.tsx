@@ -60,7 +60,7 @@ export default function YieldCalculatorPage() {
       title="주식 수익률 계산기"
       description="매수가, 현재가, 수량을 입력하면 수익률과 실수익률을 자동 계산합니다."
     >
-      
+    
       <div className="space-y-4">
     
     <div>

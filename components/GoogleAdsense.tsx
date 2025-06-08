@@ -8,13 +8,14 @@ declare global {
   }
 }
 
-export default function GlobalAdsense() {
+export default function GoogleAdsense() {
   const adRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const hasInitialized = adRef.current?.querySelector("ins")?.getAttribute("data-adsbygoogle-status") === "done";
+    const hasInitialized =
+      adRef.current?.querySelector("ins")?.getAttribute("data-adsbygoogle-status") === "done";
 
     if (!hasInitialized) {
       try {
@@ -40,6 +41,7 @@ export default function GlobalAdsense() {
     </div>
   );
 }
+
 
 
 

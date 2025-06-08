@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Head from "next/head";
+import GoogleAdsense from "@/components/GoogleAdsense";
 
 export default function PageLayout({
   title,
@@ -24,8 +26,11 @@ export default function PageLayout({
             {description}
           </p>
         )}
+         <GoogleAdsense />
         <div className="bg-white p-6 rounded-lg shadow">{children}</div>
+      
       </div>
+      
     </>
   );
 }
