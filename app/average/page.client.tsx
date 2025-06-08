@@ -81,6 +81,11 @@ export default function AverageCalculatorPage() {
       title="주식 평단가 계산기"
       description="기존 매수와 최대 3회까지 추가 매수를 입력하면 새로운 평단가를 계산하고, 수익률까지 확인할 수 있습니다."
     >
+
+      <div className="my-8">
+        <GoogleAdsense />
+      </div>
+      
       <div className="space-y-4">
         <div>
           <label className="block mb-1 font-medium text-gray-700 text-[16px]">현재 주가 (원)</label>
