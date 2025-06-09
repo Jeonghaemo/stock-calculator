@@ -18,6 +18,7 @@ export default function CompoundCalculatorPage() {
     interest: number;
     principal: number;
     schedule: { period: number; principal: number; interest: number; total: number }[];
+    rateOfReturn: number;
   } | null>(null);
 
   const handleChange = (setter: React.Dispatch<React.SetStateAction<string>>) =>
@@ -77,12 +78,14 @@ export default function CompoundCalculatorPage() {
     futureValue = balance;
     const totalPrincipal = activeTab === "saving" ? P + MP * totalPeriods : P;
     const interestEarned = futureValue - totalPrincipal;
+    const rateOfReturn = (interestEarned / totalPrincipal) * 100;
 
     setResult({
       total: futureValue,
       interest: interestEarned,
       principal: totalPrincipal,
       schedule,
+      rateOfReturn,
     });
   };
 
@@ -206,6 +209,7 @@ export default function CompoundCalculatorPage() {
             <p>총 수익: <span className="text-green-600">₩{formatNumber(Math.round(result.interest))}</span></p>
             <p>최종 금액: <span className="text-blue-600">₩{formatNumber(Math.round(result.total))}</span></p>
             <p>총 투자금: <span className="text-gray-700">₩{formatNumber(Math.round(result.principal))}</span></p>
+            <p>수익률: <span className="text-red-600">{result.rateOfReturn.toFixed(2)}%</span></p>
           </div>
         )}
 
