@@ -79,7 +79,7 @@ export default function ExchangeForm() {
         return;
       }
 
-      const res = await fetch(`/api/exchange?from=${fromCurrency}&to=${toCurrency}&amount=${amount}`);
+      const res = await fetch(`/api/exchange?from=${fromCurrency}&to=${toCurrency}&amount=${value}`);
 const data = await res.json();
 
 
