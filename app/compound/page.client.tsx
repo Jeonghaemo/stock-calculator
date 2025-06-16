@@ -21,6 +21,12 @@ export default function CompoundCalculatorPage() {
     rateOfReturn: number;
   } | null>(null);
 
+  const handleRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const value = e.target.value;
+  if (!/^(\d+(\.\d{0,4})?)?$/.test(value)) return;
+  setRate(value);
+};
+
   const handleChange = (setter: React.Dispatch<React.SetStateAction<string>>) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const raw = e.target.value.replace(/,/g, "");
@@ -49,7 +55,7 @@ export default function CompoundCalculatorPage() {
   const calculate = () => {
     const P = parseNumber(principal);
     const MP = parseNumber(monthlyPrincipal);
-    const r = parseNumber(rate) / 100;
+    const r = parseFloat(rate) / 100 || 0;
     const period = parseNumber(periodValue);
     const n = getCompoundFrequency(compoundType);
     const t = periodType === "month" ? period / 12 : period;
@@ -176,10 +182,10 @@ export default function CompoundCalculatorPage() {
           <input
             type="text"
             value={rate}
-            onChange={handleChange(setRate)}
+            onChange={handleRateChange} // ✅ 이렇게 바꿔주세요
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
-            placeholder="예: 5"
-          />
+            placeholder="예: 5.25"
+            />
         </div>
 
         <div>
