@@ -133,6 +133,47 @@ export default function YieldCalculatorPage() {
     주식 수익률 계산기는 매수가, 현재가, 보유 수량을 기준으로 수익률과 수익 금액을 계산합니다. 단타, 중장기 투자 결과를 빠르게 확인하고자 할 때 유용합니다.
   </p>
 </div>
+  {/* 수익률 계산 공식 / 예시 */}
+      <div className="mt-6">
+        <h2 className="text-lg font-bold text-gray-800 mb-2">수익률 계산 공식</h2>
+        <p className="text-gray-700 text-base leading-relaxed">
+          수익률(%) = ((매도가 - 매수가) × 수량) ÷ (매수가 × 수량) × 100
+        </p>
+        <p className="text-gray-700 text-base leading-relaxed mt-1">
+          간단히 줄이면: 수익률(%) = (매도가 ÷ 매수가 - 1) × 100
+        </p>
+        <div className="text-gray-700 text-base leading-relaxed space-y-1 mt-2">
+          <p className="font-semibold">예시</p>
+          <ul className="list-disc list-inside">
+            <li>매수가: 10,000원</li>
+            <li>매도가: 12,000원</li>
+            <li>수량: 100주</li>
+          </ul>
+          <p>→ 수익률 = (12,000 ÷ 10,000 - 1) × 100 = 20%</p>
+          <p>→ 수익금 = (12,000 - 10,000) × 100 = 200,000원</p>
+        </div>
+      </div>
+      <div className="mt-6">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">자주 묻는 질문 (FAQ)</h2>
+  <div className="space-y-4 text-base text-gray-700 leading-relaxed">
+    <div>
+      <p className="font-semibold text-gray-800">Q. 수익률 계산은 세전 기준인가요?</p>
+      <p>이 계산기는 세금과 수수료를 반영하여 계산되며 반영한 실수익률과 반영되지 않는 수익률 모두 확인할 수 있습니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 수익금과 수익률은 어떻게 다른가요?</p>
+      <p>수익금은 실제 벌거나 잃은 금액(원), 수익률은 투자금 대비 비율(%)입니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 매수가와 매도가가 같은데 수익금이 마이너스가 나와요.</p>
+      <p>수수료와 세금이 자동 반영되기 때문에 손익이 0이더라도 실수익금은 마이너스로 계산될 수 있습니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 마이너스 수익률은 손해 본 건가요?</p>
+      <p>네. 수익률이 음수이면 매수가보다 현재가가 낮아 손실 상태라는 의미입니다.</p>
+    </div>
+  </div>
+</div>
 
     </PageLayout>
   );
