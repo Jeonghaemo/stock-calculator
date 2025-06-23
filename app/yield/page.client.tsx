@@ -143,7 +143,7 @@ export default function YieldCalculatorPage() {
           간단히 줄이면: 수익률(%) = (매도가 ÷ 매수가 - 1) × 100
         </p>
         <div className="text-gray-700 text-base leading-relaxed space-y-1 mt-2">
-          <p className="font-semibold">예시</p>
+          <p className="font-semibold">📌예시</p>
           <ul className="list-disc list-inside">
             <li>매수가: 10,000원</li>
             <li>매도가: 12,000원</li>

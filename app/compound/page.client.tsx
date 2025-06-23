@@ -265,6 +265,91 @@ export default function CompoundCalculatorPage() {
     복리 계산기는 일정 수익률로 매년 재투자했을 때 자산이 얼마나 늘어나는지를 계산합니다. 장기 투자 수익 시뮬레이션에 유용하게 활용할 수 있습니다.
   </p>
 </div>
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">복리 계산 공식</h2>
+  <div className="text-base text-gray-700 leading-relaxed space-y-3">
+    <p>
+      복리 금액 = <strong>원금 × (1 + 이자율)<sup>n</sup></strong>
+    </p>
+    <p className="text-sm text-gray-600">
+      ※ n은 기간(년, 월 등)이며, 이자율은 소수(예: 5% → 0.05)로 입력합니다.
+    </p>
+
+    <p className="font-semibold mt-4">📌 예시</p>
+    <ul className="list-disc list-inside space-y-1">
+      <li>원금: 1,000,000원</li>
+      <li>연 이자율: 10%</li>
+      <li>기간: 3년</li>
+    </ul>
+    <p>
+      → 복리 금액 = 1,000,000 × (1 + 0.10)<sup>3</sup> = 1,331,000원
+    </p>
+    <p>→ 이자 수익 = <strong>331,000원</strong></p>
+
+    <hr className="my-6 border-gray-300" />
+
+    <h2 className="text-lg font-bold text-gray-800 mb-4">복리와 단리 차이점</h2>
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm text-left text-gray-700 border">
+        <thead className="bg-gray-100 text-gray-800">
+          <tr>
+            <th className="px-4 py-2 border">구분</th>
+            <th className="px-4 py-2 border">단리</th>
+            <th className="px-4 py-2 border">복리</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border">이자 계산</td>
+            <td className="px-4 py-2 border">원금에만 이자 발생</td>
+            <td className="px-4 py-2 border">원금 + 이자에 누적 적용</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border">계산식</td>
+            <td className="px-4 py-2 border">원금 × 이자율 × 기간</td>
+            <td className="px-4 py-2 border">원금 × (1 + 이자율)<sup>n</sup></td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border">특징</td>
+            <td className="px-4 py-2 border">매년 같은 이자</td>
+            <td className="px-4 py-2 border">시간 지날수록 이자 증가</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border">예시 (10% × 3년)</td>
+            <td className="px-4 py-2 border">1,300,000원</td>
+            <td className="px-4 py-2 border">1,331,000원</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border">차이</td>
+            <td className="px-4 py-2 border">3년 후 이자 300,000원</td>
+            <td className="px-4 py-2 border">3년 후 이자 331,000원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">자주 묻는 질문 (FAQ)</h2>
+  <div className="space-y-4 text-base text-gray-700 leading-relaxed">
+    <div>
+      <p className="font-semibold text-gray-800">Q. 복리는 단리랑 뭐가 다른가요?</p>
+      <p>단리는 매번 같은 이자, 복리는 이자에 이자가 붙는 구조입니다. 시간이 지날수록 차이가 커집니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 월복리와 연복리는 어떻게 다른가요?</p>
+      <p>복리 계산 시 <strong>이자가 붙는 주기(월/연)</strong>에 따라 최종 금액이 달라집니다. 월복리는 매달 불어나므로 이자가 더 큽니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 중간에 출금하면 복리 효과는 어떻게 되나요?</p>
+      <p>중간 출금 시 복리 구조가 깨지며 그 시점까지만 복리 효과가 적용됩니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 복리로 몇 년 정도 지나야 이자 수익이 크다고 느낄 수 있나요?</p>
+      <p>보통 3~5년 이상 지나야 복리의 차이가 체감됩니다. 짧은 기간은 단리와 큰 차이가 없습니다.</p>
+    </div>
+  </div>
+</div>
 
     </PageLayout>
   );

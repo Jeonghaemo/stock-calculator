@@ -106,6 +106,69 @@ export default function FeeCalculatorPage() {
     수수료 계산기는 주식 매매 시 발생하는 수수료를 반영하여 실제 수익을 계산합니다. 실수익률과 세후 수익을 정확하게 확인할 수 있습니다.
   </p>
 </div>
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">수수료 계산 공식</h2>
+  <div className="text-base text-gray-700 leading-relaxed space-y-3">
+    <p>
+      총 거래 비용 = 매수 수수료 + 매도 수수료 + 증권거래세
+    </p>
+    <p className="text-sm text-gray-600">
+      ※ 수수료율은 증권사마다 다를 수 있습니다. 기본 예시는 다음과 같습니다.
+    </p>
+    <table className="w-full text-sm text-left text-gray-700 border mt-2">
+      <thead className="bg-gray-100 text-gray-800">
+        <tr>
+          <th className="px-4 py-2 border">항목</th>
+          <th className="px-4 py-2 border">비율</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="px-4 py-2 border">매수 수수료</td>
+          <td className="px-4 py-2 border">0.015%</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-2 border">매도 수수료</td>
+          <td className="px-4 py-2 border">0.015%</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-2 border">증권거래세</td>
+          <td className="px-4 py-2 border">0.20% (코스피) 또는 0.23% (코스닥)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p className="font-semibold mt-4">📌 예시</p>
+    <ul className="list-disc list-inside">
+      <li>매수금액: 1,000,000원</li>
+      <li>매도금액: 1,100,000원</li>
+    </ul>
+    <p>
+      총 수수료 = (1,000,000 × 0.00015) + (1,100,000 × 0.00015) + (1,100,000 × 0.002)
+      = 150 + 165 + 2,200 = <strong>2,515원</strong>
+    </p>
+  </div>
+</div>
+<div className="mt-8">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">자주 묻는 질문 (FAQ)</h2>
+  <div className="space-y-4 text-base text-gray-700 leading-relaxed">
+    <div>
+      <p className="font-semibold text-gray-800">Q. 수수료는 증권사마다 다른가요?</p>
+      <p>네. 대부분 기본 수수료는 0.015% 수준이지만 비대면 계좌 개설 시 무료 또는 할인되는 경우가 많습니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 증권거래세는 꼭 납부해야 하나요?</p>
+      <p>네. 매도할 때 무조건 부과됩니다. 코스피는 0.20%, 코스닥은 0.23%로 정해져 있습니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. ETF는 증권거래세가 없나요?</p>
+      <p>맞습니다. 국내 상장 ETF는 증권거래세가 면제입니다. 하지만 수수료는 부과됩니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 장기 보유하면 수수료나 세금이 줄어드나요?</p>
+      <p>아닙니다. 보유 기간과 관계없이 매수, 매도 시점의 거래 금액에 따라 부과됩니다.</p>
+    </div>
+  </div>
+</div>
 
     </PageLayout>
   );

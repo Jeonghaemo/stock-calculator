@@ -173,12 +173,63 @@ export default function WaterCalculatorPage() {
         </ul>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-8">
         <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 설명</h2>
         <p className="text-gray-700 text-base leading-relaxed">
           물타기 계산기는 여러 번의 매수에 따른 평균 매입단가뿐만 아니라 현재 수익률과 물타기 후 예상 수익률도 계산합니다. 투자 전략을 세우기 전에 참고하는 데 도움이 됩니다.
         </p>
       </div>
+      <div className="mt-8">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">물타기 계산 공식</h2>
+  <div className="text-base text-gray-700 leading-relaxed space-y-3">
+    <p>
+      평균 단가 = (기존 매수금 + 추가 매수금) ÷ (기존 수량 + 추가 수량)
+    </p>
+    <p className="font-semibold">📌예시</p>
+    <ul className="list-disc list-inside space-y-1">
+      <li>기존 매수: 20,000원 × 50주</li>
+      <li>추가 매수: 15,000원 × 50주</li>
+    </ul>
+    <p>
+      → 평균 단가 = (20,000 × 50 + 15,000 × 50) ÷ (50 + 50) = <strong>17,500원</strong>
+    </p>
+  </div>
+</div>
+<div className="mt-8">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">자주 묻는 질문 (FAQ)</h2>
+  <div className="space-y-4 text-base text-gray-700 leading-relaxed">
+    <div>
+      <p className="font-semibold text-gray-800">Q. 물타기를 하면 무조건 손해를 줄일 수 있나요?</p>
+      <p>
+        아닙니다. 물타기는 손실을 줄이기 위한 전략이지만 주가가 계속 하락한다면 손실이 더 커질 수 있습니다.
+        물타기는 방향성에 대한 확신이 있을 때 신중하게 접근해야 합니다.
+      </p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 몇 번까지 물타기하는 게 좋을까요?</p>
+      <p>
+        물타기의 횟수에 정해진 기준은 없지만 반복할수록 리스크는 커집니다.
+        일반적으로 1~2회까지는 대응 전략의 일부로 보지만
+        지속적인 물타기는 손실금이 더 커질 수 있습니다. 총 투자금 대비 비중을 고려하는 게 중요합니다.
+      </p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 평단가가 낮아지면 수익이 나는 건가요?</p>
+      <p>
+        아닙니다. 평단가가 낮아졌다고 해서 수익이 나는 건 아니며
+        현재가가 평균 단가보다 높아야 수익이 발생합니다. 물타기 이후 주가가 상승한다면 본전 또는 수익권에 더 빨리 도달할 수 있습니다.
+      </p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 물타기보다 손절이 나은 경우도 있나요?</p>
+      <p>
+        네. 하락 원인이 기업 펀더멘털 악화, 구조적인 문제일 경우에는 손절이 더 나은 선택일 수 있습니다.
+        무조건 물타기만 고집하면 오히려 손실이 더 커질 수 있습니다. 종목 상황과 시황 분석이 함께 필요합니다.
+      </p>
+    </div>
+  </div>
+</div>
+
     </PageLayout>
   );
 }
