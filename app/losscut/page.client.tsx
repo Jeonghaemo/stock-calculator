@@ -92,6 +92,43 @@ export default function LosscutCalculatorPage() {
     손절가 계산기는 매수가 대비 손절 기준 비율을 입력하면 매도 기준 가격을 계산합니다. 리스크 관리나 손절 금액 계산에 도움이 됩니다.
   </p>
 </div>
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">손절가 계산 공식</h2>
+  <div className="text-base text-gray-700 leading-relaxed space-y-3">
+    <p>
+      손절가 = <strong>매수가 × (1 - 손실률 ÷ 100)</strong>
+    </p>
+
+    <p className="font-semibold mt-4">📌 예시</p>
+    <ul className="list-disc list-inside space-y-1">
+      <li>매수가: 50,000원</li>
+      <li>손실 기준: 10%</li>
+      <li>→ 손절가 = 50,000 × (1 - 10 ÷ 100) = <strong>45,000원</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">자주 묻는 질문 (FAQ)</h2>
+  <div className="space-y-4 text-base text-gray-700 leading-relaxed">
+    <div>
+      <p className="font-semibold text-gray-800">Q. 손절가는 꼭 설정해야 하나요?</p>
+      <p>시장 상황이 급변할 수 있기 때문에 사전에 손절 기준을 정해두면 감정적인 매매를 피할 수 있습니다. 특히 초보 투자자에게는 손절 설정이 리스크 관리에 도움이 됩니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 손절가는 얼마나로 설정하는 게 좋을까요?</p>
+      <p>일반적으로 5~15% 범위 내에서 본인의 투자 성향과 종목의 변동성에 따라 설정합니다. 단기 매매일수록 좁게, 장기 투자일수록 넓게 설정하는 경우가 많습니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 손절가에 도달하면 무조건 매도해야 하나요?</p>
+      <p>반드시 그렇지는 않지만 사전에 정한 기준이라면 지키는 것이 장기적인 수익률에 도움이 됩니다. 손절 여부는 종목 상황과 전체 전략에 따라 판단하는 것이 좋습니다.</p>
+    </div>
+    <div>
+      <p className="font-semibold text-gray-800">Q. 반등을 기대하고 손절을 늦추면 안 되나요?</p>
+      <p>반등을 기대하며 손절을 미루는 것은 손실을 키우는 대표적인 실수입니다. 목표가와 손절가를 명확히 정하고 기준 없이 바꾸지 않는 것이 중요합니다.</p>
+    </div>
+  </div>
+</div>
 
     </PageLayout>
   );

@@ -171,6 +171,58 @@ export default function CapitalGainTaxCalculatorPage() {
           해외주식의 경우, 실제 환율은 결제일 기준 환율을 기준으로 하며 본 계산기에는 반영되지 않습니다.
         </p>
       </div>
+
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">양도소득세 계산 공식</h2>
+  <p className="text-gray-700 text-base leading-relaxed">
+    양도차익 = 총 매도금액 - 총 매수금액 - 필요경비<br />
+    국내 소액주주는 상장 주식 장내 거래 시 양도소득세가 부과되지 않습니다.<br />
+    해외주식은 연간 양도차익 250만 원을 초과하는 금액에 대해 22% 세율이 적용됩니다.
+  </p>
+</div>
+
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">국내 주식 양도소득세 설명</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>소액주주는 장내 상장주식 거래에 대해 양도소득세 비과세</li>
+    <li>대주주 기준: 1종목 10억 원 이상 보유 또는 지분율 기준(1% 코스피, 2% 코스닥)</li>
+    <li>비상장주식, 장외거래는 과세 대상</li>
+    <li>세율: 20% + 지방세 2% → 총 22%</li>
+  </ul>
+</div>
+
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">해외 주식 양도소득세 설명</h2>
+  <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+    <li>연간 250만 원 초과 양도차익에 대해 과세</li>
+    <li>세율: 22% (지방세 포함)</li>
+    <li>환율은 결제일 기준 환율로 환산되며, 본 계산기에는 반영되지 않음</li>
+    <li>손익 통산 및 필요경비 차감 후 과세표준 계산</li>
+  </ul>
+</div>
+
+<div className="mt-10">
+  <h2 className="text-lg font-bold text-gray-800 mb-2">자주 묻는 질문 (FAQ)</h2>
+  <div className="space-y-4 text-base text-gray-700">
+    <div>
+      <strong>Q. 나는 대주주가 아닌데 세금 신고 안 해도 되나요?</strong><br />
+      네. 소액주주로서 장내 상장 주식을 거래한 경우 양도소득세는 부과되지 않습니다.
+    </div>
+    <div>
+      <strong>Q. 대주주 기준은 매수금액인가요? 보유금액인가요?</strong><br />
+      종목별 <b>보유 금액(시가 기준)</b>이 기준이며, 연말 또는 매도 시점 기준으로 판단합니다.
+    </div>
+    <div>
+      <strong>Q. 해외주식 양도차익은 어떻게 계산하나요?</strong><br />
+      매도금액 - 매수금액 - 필요경비로 계산하며, 250만 원 기본공제 이후 22% 세율이 적용됩니다.
+    </div>
+    <div>
+      <strong>Q. 양도소득세는 언제 신고하나요?</strong><br />
+      <b>해외주식</b>은 다음 해 5월에 <b>종합소득세 신고</b>와 함께 신고해야 하며, <b>국내 대주주</b>는 별도로 신고합니다.
+    </div>
+  </div>
+</div>
+
     </PageLayout>
   );
 }
