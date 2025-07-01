@@ -39,8 +39,6 @@ export default function RootLayout({
         <meta name="google-site-verification" content="wcYdT7ccjF1RCKtJp_HIKYR6KyClzKuuBkbnLLoaC68" />
         <meta name="naver-site-verification" content="9ae40fb9f79a937e016dfe0401dc7bae66f8cf21" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <meta property="og:image" content="https://yourdomain.com/thumbnail.png" />
 
       </head>
       <body
