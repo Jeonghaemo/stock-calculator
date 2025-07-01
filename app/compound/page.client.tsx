@@ -121,7 +121,6 @@ export default function CompoundCalculatorPage() {
       <a
         key={item.href}
         href={`https://calculator.stocktrend.co.kr${item.href}`}
-        target="_blank"
         rel="noopener noreferrer"
         className="bg-sky-100 border border-gray-300 rounded-xl shadow-md p-4 text-center min-w-[68px] transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
       >
@@ -148,7 +147,6 @@ export default function CompoundCalculatorPage() {
         <a
           key={item.href}
           href={`https://calculator.stocktrend.co.kr${item.href}`}
-          target="_blank"
           rel="noopener noreferrer"
           className="flex-shrink-0 w-32 bg-sky-100 border border-gray-300 rounded-xl shadow-md p-3 text-center transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
         >
