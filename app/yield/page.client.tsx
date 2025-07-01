@@ -67,7 +67,7 @@ export default function YieldCalculatorPage() {
   <section className="mt-0 mb-6">
   <h2 className="text-lg font-bold mb-4 text-center">주식 계산기 전체 목록</h2>
 
-  {/* PC 이상에서 보임 */}
+  {/* PC 이상에서 보임 - 그리드 */}
   <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
     {[
       { title: '수익률 계산기', href: '/yield' },
@@ -84,15 +84,16 @@ export default function YieldCalculatorPage() {
       <a
         key={item.href}
         href={`https://calculator.stocktrend.co.kr${item.href}`}
+        target="_blank"
         rel="noopener noreferrer"
-        className="bg-white border border-gray-200 rounded-xl shadow-md p-4 text-center min-w-[68px] transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
+        className="bg-sky-100 border border-gray-300 rounded-xl shadow-md p-4 text-center min-w-[68px] transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
       >
         <h3 className="text-sm font-semibold text-gray-800">{item.title}</h3>
       </a>
     ))}
   </div>
 
-  {/* 모바일에서 보임 */}
+  {/* 모바일에서 보임 - 가로 스크롤 슬라이더 */}
   <div className="sm:hidden overflow-x-auto no-scrollbar">
     <div className="flex space-x-3 px-2">
       {[
@@ -110,8 +111,9 @@ export default function YieldCalculatorPage() {
         <a
           key={item.href}
           href={`https://calculator.stocktrend.co.kr${item.href}`}
+          target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 w-36 bg-white border border-gray-200 rounded-xl shadow-md p-4 text-center transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
+          className="flex-shrink-0 w-32 bg-sky-100 border border-gray-300 rounded-xl shadow-md p-3 text-center transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
         >
           <h3 className="text-sm font-semibold text-gray-800">{item.title}</h3>
         </a>
