@@ -101,61 +101,7 @@ export default function CompoundCalculatorPage() {
       description="기본 복리와 적립식 복리를 계산할 수 있습니다."
     >
       <div className="space-y-4">
-        <section className="mt-0 mb-6">
-  <h2 className="text-lg font-bold mb-4 text-center">주식 계산기 전체 목록</h2>
-
-  {/* PC 이상에서 보임 - 그리드 */}
-  <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-    {[
-      { title: '수익률 계산기', href: '/yield' },
-      { title: '수수료 계산기', href: '/fee' },
-      { title: '평단가 계산기', href: '/average' },
-      { title: '물타기 계산기', href: '/water' },
-      { title: '양도세 계산기', href: '/tax' },
-      { title: '복리 계산기', href: '/compound' },
-      { title: '환율 계산기', href: '/exchange' },
-      { title: '목표수익 계산기', href: '/target' },
-      { title: '손절가 계산기', href: '/losscut' },
-      { title: '배당수익 계산기', href: '/dividend' },
-    ].map((item) => (
-      <a
-        key={item.href}
-        href={`https://calculator.stocktrend.co.kr${item.href}`}
-        rel="noopener noreferrer"
-        className="bg-sky-100 border border-gray-300 rounded-xl shadow-md p-4 text-center min-w-[68px] transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
-      >
-        <h3 className="text-sm font-semibold text-gray-800">{item.title}</h3>
-      </a>
-    ))}
-  </div>
-
-  {/* 모바일에서 보임 - 가로 스크롤 슬라이더 */}
-  <div className="sm:hidden overflow-x-auto no-scrollbar">
-    <div className="flex space-x-3 px-2">
-      {[
-        { title: '수익률 계산기', href: '/yield' },
-        { title: '수수료 계산기', href: '/fee' },
-        { title: '평단가 계산기', href: '/average' },
-        { title: '물타기 계산기', href: '/water' },
-        { title: '양도세 계산기', href: '/tax' },
-        { title: '복리 계산기', href: '/compound' },
-        { title: '환율 계산기', href: '/exchange' },
-        { title: '목표수익 계산기', href: '/target' },
-        { title: '손절가 계산기', href: '/losscut' },
-        { title: '배당수익 계산기', href: '/dividend' },
-      ].map((item) => (
-        <a
-          key={item.href}
-          href={`https://calculator.stocktrend.co.kr${item.href}`}
-          rel="noopener noreferrer"
-          className="flex-shrink-0 w-32 bg-sky-100 border border-gray-300 rounded-xl shadow-md p-3 text-center transition-all duration-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg active:bg-blue-100"
-        >
-          <h3 className="text-sm font-semibold text-gray-800">{item.title}</h3>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+      
         <div className="flex gap-2">
           <button
             onClick={() => setActiveTab("basic")}

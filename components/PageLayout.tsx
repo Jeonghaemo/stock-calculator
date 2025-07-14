@@ -2,6 +2,7 @@
 import React from "react";
 import Head from "next/head";
 import GoogleAdsense from "@/components/GoogleAdsense";
+import MobileFooterNav from "@/components/MobileFooterNav";
 
 export default function PageLayout({
   title,
@@ -27,10 +28,12 @@ export default function PageLayout({
           </p>
         )}
          <GoogleAdsense />
+         
         <div className="bg-white p-6 rounded-lg shadow">{children}</div>
       
       </div>
-      
+      {/* ✅ 모바일 하단 툴바 추가 */}
+      <MobileFooterNav />
     </>
   );
 }
