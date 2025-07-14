@@ -18,7 +18,7 @@ export default function ExchangePage() {
         
         <ExchangeForm />
         
-
+<GoogleAdsense />
         <div className="mt-10">
           <h2 className="text-lg font-bold text-gray-800 mb-2">계산기 사용방법</h2>
           <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
