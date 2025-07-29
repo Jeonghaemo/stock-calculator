@@ -1,4 +1,5 @@
 import Script from "next/script";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "주식 계산기",
     template: "%s | 주식 계산기",
@@ -35,7 +36,7 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-} as const;
+};
 
 export default function RootLayout({
   children,
@@ -51,25 +52,16 @@ export default function RootLayout({
           strategy="afterInteractive"
           crossOrigin="anonymous"
         />
-        <meta
-          name="google-site-verification"
-          content="wcYdT7ccjF1RCKtJp_HIKYR6KyClzKuuBkbnLLoaC68"
-        />
-        <meta
-          name="naver-site-verification"
-          content="9ae40fb9f79a937e016dfe0401dc7bae66f8cf21"
-        />
+        <meta name="google-site-verification" content="wcYdT7ccjF1RCKtJp_HIKYR6KyClzKuuBkbnLLoaC68" />
+        <meta name="naver-site-verification" content="9ae40fb9f79a937e016dfe0401dc7bae66f8cf21" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         {children}
       </body>
     </html>
   );
 }
-
 
 
 

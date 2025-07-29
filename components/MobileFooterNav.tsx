@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 export default function MobileFooterNav() {
   const pathname = usePathname();
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   const menus = [
     { href: "/", label: "홈", emoji: "🏠" },
@@ -19,15 +21,23 @@ export default function MobileFooterNav() {
     { href: "/dividend", label: "배당수익", emoji: "🏦" },
   ];
 
+  useEffect(() => {
+    // 현재 활성화된 메뉴 스크롤
+    const activeItem = navRef.current?.querySelector<HTMLAnchorElement>(
+      "a.text-blue-600"
+    );
+    activeItem?.scrollIntoView({ behavior: "smooth", inline: "center" });
+  }, [pathname]);
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-inner sm:hidden z-50">
-      <div className="flex overflow-x-auto no-scrollbar whitespace-nowrap px-2 py-2 gap-4 text-xs font-medium text-gray-800">
+      <div
+        ref={navRef}
+        className="flex overflow-x-auto no-scrollbar whitespace-nowrap px-2 py-2 gap-4 text-xs font-medium text-gray-800"
+      >
         {menus.map(({ href, label, emoji }) => {
-          // "/"(홈)과 다른 경로 구분 로직
           const isActive =
-            href === "/"
-              ? pathname === "/"
-              : pathname.startsWith(href);
+            href === "/" ? pathname === "/" : pathname.startsWith(href);
 
           return (
             <Link
@@ -38,7 +48,7 @@ export default function MobileFooterNav() {
               }`}
             >
               <span className="text-xl">{emoji}</span>
-              <span className={`text-[12px] mt-1`}>{label}</span>
+              <span className="text-[12px] mt-1">{label}</span>
             </Link>
           );
         })}
@@ -46,4 +56,3 @@ export default function MobileFooterNav() {
     </nav>
   );
 }
-

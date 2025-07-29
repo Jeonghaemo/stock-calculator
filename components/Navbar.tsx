@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   const menus = [
     { href: "/", label: "홈", emoji: "🏠" },
@@ -19,26 +21,37 @@ export default function Navbar() {
     { href: "/dividend", label: "배당수익", emoji: "🏦" },
   ];
 
+  useEffect(() => {
+    // 활성화된 메뉴 요소를 찾아 자동 스크롤
+    const activeEl = navRef.current?.querySelector<HTMLAnchorElement>(
+      "a.bg-blue-50"
+    );
+    activeEl?.scrollIntoView({ behavior: "smooth", inline: "center" });
+  }, [pathname]);
+
   return (
     <nav className="bg-white border-b border-gray-300 px-4 py-3 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto">
         <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
-          <div className="flex gap-2 py-1 min-w-fit justify-start sm:justify-center">
+          <div
+            ref={navRef}
+            className="flex gap-2 py-1 min-w-fit justify-start sm:justify-center"
+          >
             {menus.map(({ href, label, emoji }) => {
-              // "/"(홈)과 나머지 경로 구분
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
+
               return (
                 <Link
                   key={href}
                   href={href}
                   className={`flex items-center gap-1 px-3 py-2 rounded-md border
                     transition whitespace-nowrap
-                    ${isActive
-                      ? "bg-blue-50 border-blue-500 text-blue-600 font-bold"
-                      : "bg-gray-100 border-gray-300 text-gray-800 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600"
-                    }`
-                  }
+                    ${
+                      isActive
+                        ? "bg-blue-50 border-blue-500 text-blue-600 font-bold"
+                        : "bg-gray-100 border-gray-300 text-gray-800 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600"
+                    }`}
                 >
                   <span className="text-base">{emoji}</span>
                   <span className="text-base font-semibold">{label}</span>
@@ -51,5 +64,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
